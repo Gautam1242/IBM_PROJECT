@@ -3,10 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FoodFlow - Zero Hunger</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <header>
+        <h1>FoodFlow - Zero Hunger</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#" id="loginBtn">Login</a>
+        <a href="#" id="signupBtn">Sign Up</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="main-body">
+            <h2>Welcome to FoodFlow</h2>
+            <p style="margin-top: 3px;">Our mission is to eradicate hunger by facilitating the donation of meals. Whether you're an individual, a shop owner, or a hotel, you can contribute to our cause.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Donate Food</h3>
+                    <p>Contribute your excess food to those in need and help fight hunger in your community.</p>
+                </div>
+                <div class="card">
+                    <h3>Volunteer</h3>
+                    <p>Join us as a volunteer to help distribute meals and make a difference.</p>
+                </div>
+                <div class="card">
+                    <h3>Partner with Us</h3>
+                    <p>Become a partner and help us reach more people in need.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="main-body">
+            <h2>About Us</h2>
+            <p>FoodFlow is dedicated to achieving zero hunger by connecting donors and recipients. We aim to reduce food waste and provide meals to those in need through a seamless donation process.</p>
+        </section>
+        <section class="testimonial">
+            <h2>Testimonials</h2>
+            <p>"FoodFlow has changed my life. Now I can easily donate excess food and help those in need." - Jane Doe</p>
+            <p>"A wonderful initiative to eliminate hunger in our community. Highly recommend!" - John Smith</p>
+        </section>
+        <section id="contact" class="form-container">
+            <h2>Get Involved</h2>
+            <div id="error-messages"></div>
+            <form id="contact-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 FoodFlow. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label><br>
+                <input type="email" id="login-email" name="login-email" required><br>
+                <label for="login-password">Password:</label><br>
+                <input type="password" id="login-password" name="login-password" required><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-name">Name:</label><br>
+                <input type="text" id="signup-name" name="signup-name" required><br>
+                <label for="signup-email">Email:</label><br>
+                <input type="email" id="signup-email" name="signup-email" required><br>
+                <label for="signup-password">Password:</label><br>
+                <input type="password" id="signup-password" name="signup-password" required><br>
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to validate form inputs
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const errorMessages = [];
+
+            if (name === '') {
+                errorMessages.push('Name is required.');
+            }
+
+            if (email === '') {
+                errorMessages.push('Email is required.');
+            } else if (!validateEmail(email)) {
+                errorMessages.push('Please enter a valid email address.');
+            }
+
+            if (message === '') {
+                errorMessages.push('Message is required.');
+            }
+
+            const errorContainer = document.getElementById('error-messages');
+            errorContainer.innerHTML = '';
+
+            if (errorMessages.length > 0) {
+                errorMessages.forEach(msg => {
+                    const errorMsg = document.createElement('p');
+                    errorMsg.textContent = msg;
+                    errorMsg.style.color = 'red';
+                    errorContainer.appendChild(errorMsg);
+                });
+            } else {
+                // Simulate form submission
+                const successMessage = document.createElement('p');
+                successMessage.textContent = 'Thank you for your message!';
+                successMessage.style.color = 'green';
+                errorContainer.appendChild(successMessage);
+                // Reset the form
+                document.getElementById('contact-form').reset();
+            }
+        }
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+
+        // Add event listener to the form
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', validateForm);
+
+            // Get modal elements
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const closeLogin = document.getElementById('closeLogin');
+            const closeSignup = document.getElementById('closeSignup');
+
+            // Open login modal
+            loginBtn.addEventListener('click', () => {
+                loginModal.style.display = 'block';
+            });
+
+            // Open signup modal
+            signupBtn.addEventListener('click', () => {
+                signupModal.style.display = 'block';
+            });
+
+            // Close login modal
+            closeLogin.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+            });
+
+            // Close signup modal
+            closeSignup.addEventListener('click', () => {
+                signupModal.style.display = 'none';
+            });
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', (event) => {
+                if (event.target === loginModal) {
+                    loginModal.style.display = 'none';
+                } else if (event.target === signupModal) {
+                    signupModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
