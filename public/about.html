@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFlow - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styles for about.html */
+        /* Basic Reset */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background: #2d2e2e;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #66bb6a;
+            color: #fff;
+        }
+
+        /* Section Styles */
+        #about {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Team Member Cards */
+        .team-card {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 300px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 200px;
+        }
+
+        .team-member .member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Animation Styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #2d2e2e;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer .social-media {
+            margin-top: 1rem;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-media a:hover {
+            color: #66bb6a;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header img {
+                max-width: 100px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            header nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            /*header nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            header nav ul li a {
+                padding: 0.8rem 1.2rem;
+            }*/
+
+            #about {
+                padding: 3rem 1rem;
+            }
+
+            #about h1 {
+                font-size: 2rem;
+            }
+
+            #about p {
+                font-size: 1rem;
+            }
+
+            .team-card {
+                gap: 1.5rem;
+            }
+
+            footer .social-media a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="FoodFlow Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h1>About Us</h1>
+        <p class="fade-in">FoodFlow is a non-profit organization focused on achieving the Sustainable Development Goal of Zero Hunger. We believe that food should never go to waste when there are people in need. Our mission is to create a seamless and efficient process for food donation, ensuring that surplus food reaches those who need it most.</p>
+        <p class="fade-in">Our platform connects donors, such as restaurants, hotels, and individuals, with local charities and organizations that distribute the food. By leveraging technology and community partnerships, we aim to reduce food waste and provide nutritious meals to the hungry.</p>
+        <p class="fade-in">Founded in 2024, FoodFlow has quickly grown to become a trusted resource for both donors and recipients. Our dedicated team works tirelessly to ensure that every donation makes a difference. Join us in our mission to eradicate hunger and build a more sustainable future.</p>
+
+        <div class="team-card">
+            <div class="team-member">
+                <img src="images/team-member1.jpg" alt="Team Member 1">
+                <div class="member-info">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/team-member2.jpg" alt="Team Member 2">
+                <div class="member-info">
+                    <h3>Jane Smith</h3>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/team-member3.jpg" alt="Team Member 3">
+                <div class="member-info">
+                    <h3>David Johnson</h3>
+                    <p>Community Outreach Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 FoodFlow. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com/yourpage">Facebook</a>
+            <a href="https://twitter.com/yourpage">Twitter</a>
+            <a href="https://instagram.com/yourpage">Instagram</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // JavaScript for Fade-in Animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            
+            fadeInElements.forEach(element => {
+                if (isElementInViewport(element)) {
+                    element.classList.add('active');
+                }
+            });
+            
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            
+            function checkFadeIn() {
+                fadeInElements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', checkFadeIn);
+        });
+    </script>
+</body>
+
+</html>

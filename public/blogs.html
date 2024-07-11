@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFlow - Our Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background: #2d2e2e;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        header nav ul li a:hover {
+            color: #66bb6a;
+            background-color: #222;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .blog-post {
+            background: #f4f4f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-post h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post a {
+            display: inline-block;
+            color: #66bb6a;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-post a:hover {
+            color: #333;
+        }
+
+        .blog-content {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #2d2e2e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer .social-media {
+            margin-top: 1rem;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-media a:hover {
+            color: #66bb6a;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .blog-post {
+                flex: 1 1 calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .blog-post {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        // JavaScript for handling read more link click
+        document.addEventListener('DOMContentLoaded', function () {
+            const readMoreLinks = document.querySelectorAll('.blog-post a');
+
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const content = this.parentElement.querySelector('.blog-content');
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                    this.textContent = content.style.display === 'none' ? 'Read more' : 'Read less';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="FoodFlow Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="blogs">
+        <h1>Our Blog</h1>
+        <div class="blog-post">
+            <h2>10 Simple Ways to Reduce Food Waste at Home</h2>
+            <p>Date: July 5, 2024</p>
+            <p>Reducing food waste starts at home. Here are ten easy and practical tips to help you minimize food waste and make the most of the food you buy. From meal planning to proper storage, small changes can have a big impact...</p>
+            <a href="#">Read more</a>
+            <div class="blog-content">
+                <p>Additional content goes here...</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <h2>The Importance of Sustainable Food Practices</h2>
+            <p>Date: June 25, 2024</p>
+            <p>Sustainable food practices are essential for the health of our planet and our communities. Learn more about how sustainable agriculture and food distribution can help combat hunger and protect the environment...</p>
+            <a href="#">Read more</a>
+            <div class="blog-content">
+                <p>Additional content goes here...</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <h2>How Volunteering Can Make a Difference</h2>
+            <p>Date: June 10, 2024</p>
+            <p>Volunteering with FoodFlow is a rewarding experience that makes a tangible difference in the fight against hunger. Hear from our volunteers about their experiences and learn how you can get involved...</p>
+            <a href="#">Read more</a>
+            <div class="blog-content">
+                <p>Additional content goes here...</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 FoodFlow. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com/yourpage">Facebook</a>
+            <a href="https://twitter.com/yourpage">Twitter</a>
+            <a href="https://instagram.com/yourpage">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>
