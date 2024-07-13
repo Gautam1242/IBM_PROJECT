@@ -1,499 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <style>
-        /* CSS styles */
-        /* Basic Reset */
+      /* CSS styles */
+      /* Basic Reset */
 
-        html{
-            scroll-behavior: smooth;
-        }
-    
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        /* Container Styles */
-    
-        /* Header Styles */
-        header {
-            background: #2d2e2e;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Container Styles */
+
+      
+
+      /* Header Styles
+
+      /* Section Styles */
+      section {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      section p {
+        font-size: 1.1rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 2rem;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .card:hover{
+        background-color: #b1d1f4;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+        color: #777;
+      }
+
+      /* Footer Styles */
+      footer {
+        background: #2d2e2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      footer .social-media {
+        margin-top: 1rem;
+      }
+
+      footer .social-media a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-media a:hover {
+        color: #66bb6a;
+      }
+
+      /* Slideshow Styles */
+      #slideshow {
+        background-color: #f8f9fa;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .slide {
+        display: none;
+        width: 100%;
+      }
+
+      .slide img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .fade {
+        animation: fadeEffect 1.5s ease-in-out infinite;
+      }
+
+      @keyframes fadeEffect {
+        0%,
+        100% {
+          opacity: 0;
         }
-    
-        header img {
-            max-width: 120px;
-            display: block;
-            margin: 0 auto;
+        50% {
+          opacity: 1;
         }
-    
-        header nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-    
-        header nav ul li {
-            margin: 0 1rem;
-        }
-    
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-    
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-    
-        section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-    
-        section p {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-    
+      }
+
+      /* Contact Form Styles */
+      #contact {
+        background-color: #fff;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      #contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+
+      #contact form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form-control {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .form-control label {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .form-control input,
+      .form-control textarea {
+        width: calc(100% - 2rem);
+        padding: 1rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s;
+      }
+
+      .form-control input:focus,
+      .form-control textarea:focus {
+        outline: none;
+        border-color: #66bb6a;
+      }
+
+      .form-control small {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        font-size: 0.9rem;
+        color: #dc3545;
+        display: none;
+      }
+
+      .form-control.error input,
+      .form-control.error textarea {
+        border-color: #dc3545;
+      }
+
+      .form-control.error small {
+        display: block;
+      }
+
+      .form-control.success input,
+      .form-control.success textarea {
+        border-color: #66bb6a;
+      }
+
+      #btn {
+        background-color: #6087b3;
+        width: 130px;
+        text-align: center;
+        height: 55px;
+        font-size: large;
+        border-radius: 5px;
+        transition: 0.5;
+        cursor: pointer;
+      }
+      #btn:hover {
+        background-color: #5468e8;
+        transition: 0.5s;
+        scale: 1.3;
+      }
+
+      /* Scroll-to-Top Button Styles */
+      #scrollTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 10px 15px;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      #scrollTopBtn:hover {
+        background-color: #4caf50;
+        transform: scale(1.1);
+      }
+
+
+      /* Media Queries */
+      @media (max-width: 768px) {
         .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
         }
-    
+
         .card {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 2rem;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+          width: 80%;
         }
-    
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-    
-        .card h2 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-    
-        .card p {
-            font-size: 1rem;
-            color: #777;
-        }
-    
-        /* Footer Styles */
-        footer {
-            background: #2d2e2e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    
-        footer p {
-            margin: 0.5rem 0;
-        }
-    
-        footer .social-media {
-            margin-top: 1rem;
-        }
-    
-        footer .social-media a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 0.5rem;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-    
-        footer .social-media a:hover {
-            color: #66bb6a;
-        }
-    
-        /* Slideshow Styles */
-        #slideshow {
-            background-color: #f8f9fa;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-    
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-    
-        .slide {
-            display: none;
-            width: 100%;
-        }
-    
-        .slide img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    
-        .fade {
-            animation: fadeEffect 1.5s ease-in-out infinite;
-        }
-    
-        @keyframes fadeEffect {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-    
-        /* Contact Form Styles */
-        #contact {
-            background-color: #fff;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-    
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
-    
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .form-control {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-    
-        .form-control label {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-    
+
         .form-control input,
         .form-control textarea {
-            width: calc(100% - 2rem);
-            padding: 1rem;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            transition: border-color 0.3s;
+          width: 100%;
         }
-    
-        .form-control input:focus,
-        .form-control textarea:focus {
-            outline: none;
-            border-color: #66bb6a;
-        }
-    
-        .form-control small {
-            position: absolute;
-            bottom: -1rem;
-            left: 0;
-            font-size: 0.9rem;
-            color: #dc3545;
-            display: none;
-        }
-    
-        .form-control.error input,
-        .form-control.error textarea {
-            border-color: #dc3545;
-        }
-    
-        .form-control.error small {
-            display: block;
-        }
-    
-        .form-control.success input,
-        .form-control.success textarea {
-            border-color: #66bb6a;
-        }
-
-        #btn{
-            background-color: #66bb6a;
-            width: 130px;
-            text-align: center;
-            height: 55px;
-            font-size: large;
-            border-radius: 5px;
-            transition: 0.5;
-            cursor: pointer;
-        }
-        #btn:hover{
-            background-color: #2bb03d;
-            transition: 0.8s;
-        }
-
-    
-        /* Scroll-to-Top Button Styles */
-        #scrollTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #66bb6a;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            padding: 10px 15px;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-    
-        #scrollTopBtn:hover {
-            background-color: #4caf50;
-            transform: scale(1.1);
-        }
-    
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .cards {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-            }
-    
-            .card {
-                width: 80%;
-            }
-    
-            .form-control input,
-            .form-control textarea {
-                width: 100%;
-            }
-            header{
-                width: 100%;
-            }
-            header nav{
-                width: 100%;
-            }
-
-        }
+        
+      }
     </style>
-    
-</head>
+  </head>
 
-<body>
-    <div class="container">
-    <header>
-        <img src="images/logo.png" alt="FoodFlow Logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+  <body>
+    <div class="maincontainer">
+      <div id="header">
+        <div class="container">
+          <nav>
+            <!-- <img src="images/logo.png" class="logo" /> -->
+            <h1 style="color: #5468e8" id="first-nav">Food Flow</h1>
+            <ul id="sidemenu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+              <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <h1>Welcome to FoodFlow</h1>
-        <p>FoodFlow is a community-driven initiative dedicated to eradicating hunger by facilitating the donation of meals. Our platform connects donors, including individuals, shop owners, and hotels, with those in need. Together, we can make a significant impact and move towards achieving Zero Hunger.</p>
-        <div class="cards">
-            <div class="card">
-                <h2>Donate Food</h2>
-                <p>Contribute your excess food to those in need and help fight hunger in your community. Every meal counts!</p>
-            </div>
-            <div class="card">
-                <h2>Volunteer</h2>
-                <p>Join us as a volunteer to help distribute meals and make a difference. Your time and effort can bring smiles to many faces.</p>
-            </div>
-            <div class="card">
-                <h2>Partner with Us</h2>
-                <p>Become a partner and help us reach more people in need. Together, we can build a hunger-free world.</p>
-            </div>
+            <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
+          </nav>
         </div>
-    </section>
-    <section id="slideshow">
+      </div>
+      <section id="home">
+        <h1>Welcome to FoodFlow</h1>
+        <p>
+          FoodFlow is a community-driven initiative dedicated to eradicating
+          hunger by facilitating the donation of meals. Our platform connects
+          donors, including individuals, shop owners, and hotels, with those in
+          need. Together, we can make a significant impact and move towards
+          achieving Zero Hunger.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <h2>Donate Food</h2>
+            <p>
+              Contribute your excess food to those in need and help fight hunger
+              in your community. Every meal counts!
+            </p>
+          </div>
+          <div class="card">
+            <h2>Volunteer</h2>
+            <p>
+              Join us as a volunteer to help distribute meals and make a
+              difference. Your time and effort can bring smiles to many faces.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Partner with Us</h2>
+            <p>
+              Become a partner and help us reach more people in need. Together,
+              we can build a hunger-free world.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="slideshow">
         <h2>Featured Slideshow</h2>
         <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="../images/img1.jpg" alt="Slide 1" width="800" height="360">
-            </div>
-            <div class="slide fade">
-                <img src="../images/img2.jpg" alt="Slide 2" width="800" height="360">
-            </div>
-            <div class="slide fade">
-                <img src="../images/img3.jpg" alt="Slide 3" width="800" height="360">
-            </div>
+          <div class="slide fade">
+            <img
+              src="../images/img1.jpg"
+              alt="Slide 1"
+              width="800"
+              height="360"
+            />
+          </div>
+          <div class="slide fade">
+            <img
+              src="../images/img2.jpg"
+              alt="Slide 2"
+              width="800"
+              height="360"
+            />
+          </div>
+          <div class="slide fade">
+            <img
+              src="../images/img3.jpg"
+              alt="Slide 3"
+              width="800"
+              height="360"
+            />
+          </div>
         </div>
-    </section>
-    <section id="contact">
+      </section>
+      <section id="contact">
         <h2>Contact Us</h2>
         <form id="contactForm" action="#" method="post">
-            <div class="form-control">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <small>Error message</small>
-            </div>
-            <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <small>Error message</small>
-            </div>
-            <div class="form-control">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <small>Error message</small>
-            </div>
-            <button type="submit" id="btn">Submit</button>
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <small></small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <small></small>
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <small></small>
+          </div>
+          <button type="submit" id="btn">Submit</button>
         </form>
-    </section>
-    <footer>
+      </section>
+      <footer>
         <p>© 2024 FoodFlow. All rights reserved.</p>
         <div class="social-media">
-            <a href="https://facebook.com/yourpage"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/yourpage"><i class="fa-brands fa-square-twitter"></i></a>
-            <a href="https://instagram.com/yourpage"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com/yourpage"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/yourpage"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a href="https://instagram.com/yourpage"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
         </div>
-    </footer>
-    <button id="scrollTopBtn" title="Go to top">Top</button>
-
+      </footer>
+      <button id="scrollTopBtn" title="Go to top">Top</button>
     </div>
-    <script src="https://kit.fontawesome.com/eb93dfa716.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/eb93dfa716.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-        // JavaScript for slideshow
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
+      var sidemenu = document.getElementById("sidemenu");
 
-        function showSlides() {
-            slides.forEach(slide => slide.style.display = 'none');
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style.display = 'block';
-            setTimeout(showSlides, 4000); // Change image every 4 seconds
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+
+      // JavaScript for slideshow
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide");
+
+      function showSlides() {
+        slides.forEach((slide) => (slide.style.display = "none"));
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+      }
+
+      showSlides();
+
+      // JavaScript for form validation
+      const form = document.querySelector("#contactForm");
+      const nameInput = document.querySelector("#name");
+      const emailInput = document.querySelector("#email");
+      const messageInput = document.querySelector("#message");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (validateForm()) {
+          // Submit form or show success message
+          alert("Form submitted successfully!");
+          form.reset();
+        }
+      });
+
+      function validateForm() {
+        let isValid = true;
+
+        if (nameInput.value.trim() === "") {
+          showError(nameInput, "Name is required");
+          isValid = false;
+        } else {
+          showSuccess(nameInput);
         }
 
-        showSlides();
-
-        // JavaScript for form validation
-        const form = document.querySelector('#contactForm');
-        const nameInput = document.querySelector('#name');
-        const emailInput = document.querySelector('#email');
-        const messageInput = document.querySelector('#message');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (validateForm()) {
-                // Submit form or show success message
-                alert('Form submitted successfully!');
-                form.reset();
-            }
-        });
-
-        function validateForm() {
-            let isValid = true;
-
-            if (nameInput.value.trim() === '') {
-                showError(nameInput, 'Name is required');
-                isValid = false;
-            } else {
-                showSuccess(nameInput);
-            }
-
-            if (emailInput.value.trim() === '') {
-                showError(emailInput, 'Email is required');
-                isValid = false;
-            } else if (!isValidEmail(emailInput.value.trim())) {
-                showError(emailInput, 'Please enter a valid email');
-                isValid = false;
-            } else {
-                showSuccess(emailInput);
-            }
-
-            if (messageInput.value.trim() === '') {
-                showError(messageInput, 'Message is required');
-                isValid = false;
-            } else {
-                showSuccess(messageInput);
-            }
-
-            return isValid;
+        if (emailInput.value.trim() === "") {
+          showError(emailInput, "Email is required");
+          isValid = false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+          showError(emailInput, "Please enter a valid email");
+          isValid = false;
+        } else {
+          showSuccess(emailInput);
         }
 
-        function showError(input, message) {
-            const formControl = input.parentElement;
-            formControl.className = 'form-control error';
-            const small = formControl.querySelector('small');
-            small.innerText = message;
+        if (messageInput.value.trim() === "") {
+          showError(messageInput, "Message is required");
+          isValid = false;
+        } else {
+          showSuccess(messageInput);
         }
 
-        function showSuccess(input) {
-            const formControl = input.parentElement;
-            formControl.className = 'form-control success';
+        return isValid;
+      }
+
+      function showError(input, message) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control error";
+        const small = formControl.querySelector("small");
+        small.innerText = message;
+      }
+
+      function showSuccess(input) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control success";
+      }
+
+      function isValidEmail(email) {
+        // Regex for basic email validation
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // JavaScript for scroll-to-top button
+      const scrollTopBtn = document.querySelector("#scrollTopBtn");
+
+      window.addEventListener("scroll", function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
         }
+      });
 
-        function isValidEmail(email) {
-            // Regex for basic email validation
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        // JavaScript for scroll-to-top button
-        const scrollTopBtn = document.querySelector('#scrollTopBtn');
-
-        window.addEventListener('scroll', function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollTopBtn.style.display = 'block';
-            } else {
-                scrollTopBtn.style.display = 'none';
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', function () {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-        });
+      scrollTopBtn.addEventListener("click", function () {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+      });
     </script>
-</body>
-
+  </body>
 </html>

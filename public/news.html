@@ -1,245 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - News and Highlights</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <style>
-        /* Basic Reset */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            margin: 0;
-        }
+      /* Basic Reset */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        margin: 0;
+      }
 
-        /* Header Styles */
-        header {
-            background: #2d2e2e;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+      /* Header Styles */
 
-        header img {
-            max-width: 120px;
-            display: block;
-            margin: 0 auto;
-        }
+      /* Section Styles */
+      section {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
 
-        header nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
+      section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
 
-        header nav ul {
-            list-style: none;
-            display: flex;
-        }
+      .articles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
-        header nav ul li {
-            margin: 0 1rem;
-        }
+      article {
+        flex: 1 1 calc(33% - 2rem);
+        background: #f4f4f9;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
+      article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
 
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+      article h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
 
-        section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
+      article p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
 
-        .articles {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+      article p:first-of-type {
+        color: #66bb6a;
+        font-weight: bold;
+      }
 
+      /* Footer Styles */
+      footer {
+        background: #2d2e2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      footer .social-media {
+        margin-top: 1rem;
+      }
+
+      footer .social-media a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-media a:hover {
+        color: #66bb6a;
+      }
+
+      /* Media Queries */
+      @media (max-width: 1024px) {
         article {
-            flex: 1 1 calc(33% - 2rem);
-            background: #f4f4f9;
-            padding: 1.5rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+          flex: 1 1 calc(50% - 2rem);
         }
+      }
 
-        article:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      @media (max-width: 768px) {
+        .articles {
+          flex-direction: column;
+          gap: 1.5rem;
         }
-
-        article h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: #333;
+        article {
+          flex: 1 1 100%;
         }
-
-        article p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        article p:first-of-type {
-            color: #66bb6a;
-            font-weight: bold;
-        }
-
-        /* Footer Styles */
-        footer {
-            background: #2d2e2e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        footer .social-media {
-            margin-top: 1rem;
-        }
-
-        footer .social-media a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 0.5rem;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        footer .social-media a:hover {
-            color: #66bb6a;
-        }
-
-        /* Media Queries */
-        @media (max-width: 1024px) {
-            article {
-                flex: 1 1 calc(50% - 2rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            header nav {
-                flex-direction: column;
-            }
-            header nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            header nav ul li {
-                margin: 0.5rem 0;
-            }
-            header nav ul {
-                flex-direction: column;
-                margin: 0;
-            }
-
-            header nav ul li {
-                margin: 0.5rem 0;
-            }
-
-            .articles {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            article {
-                flex: 1 1 100%;
-            }
-        }
+      }
     </style>
 
     <script>
-        // JavaScript for handling read more link click
-        document.addEventListener('DOMContentLoaded', function () {
-            const readMoreLinks = document.querySelectorAll('.articles article a');
+      // JavaScript for handling read more link click
+      document.addEventListener("DOMContentLoaded", function () {
+        const readMoreLinks = document.querySelectorAll(".articles article a");
 
-            readMoreLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const postTitle = this.closest('article').querySelector('h2').innerText;
-                    alert(`Clicked on "${postTitle}" - Read more functionality can be implemented here.`);
-                });
-            });
+        readMoreLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const postTitle =
+              this.closest("article").querySelector("h2").innerText;
+            alert(
+              `Clicked on "${postTitle}" - Read more functionality can be implemented here.`
+            );
+          });
         });
+      });
     </script>
-</head>
+  </head>
 
-<body>
-    <header>
-        <img src="images/logo.png" alt="FoodFlow Logo">
+  <body>
+    <div class="maincontainer">
+    <div id="header">
+      <div class="container">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+          <!-- <img src="images/logo.png" class="logo" /> -->
+          <h1 style="color: #5468e8" id="first-nav">Food Flow</h1>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
         </nav>
-    </header>
+      </div>
+    </div>
     <section id="news">
-        <h1>News and Highlights</h1>
-        <div class="articles">
-            <article>
-                <h2>FoodFlow Receives Prestigious Community Service Award</h2>
-                <p>Date: July 1, 2024</p>
-                <p>We are honored to announce that FoodFlow has been awarded the 2024 Community Service Award for our outstanding efforts in combating hunger and food waste. This recognition is a testament to the hard work and dedication of our volunteers, donors, and partners. Together, we are making a significant impact in our communities.</p>
-            </article>
-            <article>
-                <h2>New Partnership with Local Farmers</h2>
-                <p>Date: June 15, 2024</p>
-                <p>FoodFlow is excited to partner with local farmers to provide fresh produce to those in need. This initiative aims to ensure that everyone has access to nutritious, locally-sourced food while supporting our local agricultural community. Together, we can reduce food waste and promote sustainable practices.</p>
-            </article>
-            <article>
-                <h2>Volunteer Spotlight: Meet Sarah Johnson</h2>
-                <p>Date: May 20, 2024</p>
-                <p>Sarah Johnson has been a dedicated volunteer with FoodFlow for over two years. Her commitment to helping distribute meals and organize food drives has made a tremendous difference in our efforts to fight hunger. Sarah's passion and dedication inspire us all to do more. Thank you, Sarah!</p>
-            </article>
-        </div>
+      <h1>News and Highlights</h1>
+      <div class="articles">
+        <article>
+          <h2>FoodFlow Receives Prestigious Community Service Award</h2>
+          <p>Date: July 1, 2024</p>
+          <p>
+            We are honored to announce that FoodFlow has been awarded the 2024
+            Community Service Award for our outstanding efforts in combating
+            hunger and food waste. This recognition is a testament to the hard
+            work and dedication of our volunteers, donors, and partners.
+            Together, we are making a significant impact in our communities.
+          </p>
+        </article>
+        <article>
+          <h2>New Partnership with Local Farmers</h2>
+          <p>Date: June 15, 2024</p>
+          <p>
+            FoodFlow is excited to partner with local farmers to provide fresh
+            produce to those in need. This initiative aims to ensure that
+            everyone has access to nutritious, locally-sourced food while
+            supporting our local agricultural community. Together, we can reduce
+            food waste and promote sustainable practices.
+          </p>
+        </article>
+        <article>
+          <h2>Volunteer Spotlight: Meet Sarah Johnson</h2>
+          <p>Date: May 20, 2024</p>
+          <p>
+            Sarah Johnson has been a dedicated volunteer with FoodFlow for over
+            two years. Her commitment to helping distribute meals and organize
+            food drives has made a tremendous difference in our efforts to fight
+            hunger. Sarah's passion and dedication inspire us all to do more.
+            Thank you, Sarah!
+          </p>
+        </article>
+      </div>
     </section>
     <footer>
-        <p>© 2024 FoodFlow. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://facebook.com/yourpage"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/yourpage"><i class="fa-brands fa-square-twitter"></i></a>
-            <a href="https://instagram.com/yourpage"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+      <p>© 2024 FoodFlow. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://facebook.com/yourpage"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/yourpage"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a href="https://instagram.com/yourpage"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/eb93dfa716.js" crossorigin="anonymous"></script>
-</body>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/eb93dfa716.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
 
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
 </html>
