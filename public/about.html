@@ -171,6 +171,54 @@
           margin: 0 0.5rem;
         }
       }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 2rem;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .card:hover{
+        background-color: #dad8d8;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+        color: #777;
+      }
+      @media (max-width: 768px) {
+        .cards {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .card {
+          width: 80%;
+        }
+      }
     </style>
   </head>
 
@@ -196,6 +244,7 @@
     </div>
     <section id="about">
       <h1>About Us</h1>
+      <img class="fade-in card" src="https://img.freepik.com/free-vector/team-concept-illustration_114360-678.jpg?t=st=1721500317~exp=1721503917~hmac=187b7e3a94182bfeb2cdb80f307824efd1bd8c240f2e7e78d8fb4fa8af306bab&w=996"  alt="">
       <p class="fade-in">
         FoodFlow is a non-profit organization focused on achieving the
         Sustainable Development Goal of Zero Hunger. We believe that food should
@@ -203,12 +252,14 @@
         create a seamless and efficient process for food donation, ensuring that
         surplus food reaches those who need it most.
       </p>
+      <img class="fade-in card" src="https://img.freepik.com/free-vector/goal-achievement-teamwork-business-concept-career-growth-cooperation-development-project_107791-29.jpg?t=st=1721500602~exp=1721504202~hmac=8c6e0ad7092ea8e3a0c2657ede65fd737f1559ddd097e78819423afe55a12ddb&w=740" alt="">
       <p class="fade-in">
         Our platform connects donors, such as restaurants, hotels, and
         individuals, with local charities and organizations that distribute the
         food. By leveraging technology and community partnerships, we aim to
         reduce food waste and provide nutritious meals to the hungry.
       </p>
+      <img class="fade-in card" src="https://img.freepik.com/premium-vector/group-businesspeople-with-hands-coming-together-unity-teamwork-success-celebration_235461-685.jpg?w=826" alt="">
       <p class="fade-in">
         Founded in 2024, FoodFlow has quickly grown to become a trusted resource
         for both donors and recipients. Our dedicated team works tirelessly to

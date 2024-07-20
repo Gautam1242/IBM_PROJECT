@@ -132,7 +132,7 @@
       }
 
       .slide img {
-        width: 100%;
+        width: 70%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
@@ -285,6 +285,17 @@
         }
         
       }
+      /* Animation Styles */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
 
@@ -294,7 +305,7 @@
         <div class="container">
           <nav>
             <!-- <img src="images/logo.png" class="logo" /> -->
-            <h1 style="color: #292a2b" id="first-nav">Food Flow</h1>
+            <h1 style="color: #1e1f1e" id="first-nav">Food Flow</h1>
             <ul id="sidemenu">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
@@ -310,7 +321,13 @@
         </div>
       </div>
       <section id="home">
-        <h1>Welcome to FoodFlow</h1>
+        <marquee loop direction="left"><h1>Welcome to Food Flow</h1></marquee>
+          
+        <div>
+          <img class="card" src="https://img.freepik.com/free-vector/tiny-people-standing-near-box-donation-food-delivery-volunteers-giving-healthy-grocery-goods-charity-flat-vector-illustration-social-support-humanitarian-help-community-sharing-concept_74855-21023.jpg" alt="">
+          <img class="card" src="https://img.freepik.com/premium-photo/group-people-are-standing-around-boxes-food-including-vegetables_137441-11131.jpg?w=996" alt="">
+        </div>
+        
         <p>
           FoodFlow is a community-driven initiative dedicated to eradicating
           hunger by facilitating the donation of meals. Our platform connects
