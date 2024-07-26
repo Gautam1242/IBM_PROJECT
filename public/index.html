@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - Home</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       /* CSS styles */
       /* Basic Reset */
@@ -68,7 +68,7 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
       .card:hover{
-        background-color: #dad8d8;
+        background-color: #e7eeea;
       }
 
       .card h2 {
@@ -296,6 +296,19 @@
         opacity: 1;
         transform: translateY(0);
       }
+      #cardbtn {
+        padding: 5px;
+        background-color: #fafdfa;
+        border-radius: 10px;
+        border: 2px solid rgb(167, 163, 163);
+        width: 190px;
+        height: 50px;
+        transition: 0.89s;
+      }
+      #cardbtn:hover {
+        background-color: rgb(67, 246, 88);
+        scale: 1.1;
+      }
     </style>
   </head>
 
@@ -337,25 +350,28 @@
         </p>
         <div class="cards">
           <div class="card">
-            <h2>Donate Food</h2>
+            <h2>Donate Food</h2><hr>
             <p>
               Contribute your excess food to those in need and help fight hunger
               in your community. Every meal counts!
             </p>
+            <button id="cardbtn">Donate Food</button>
           </div>
           <div class="card">
-            <h2>Volunteer</h2>
+            <h2>Volunteer</h2><hr>
             <p>
               Join us as a volunteer to help distribute meals and make a
               difference. Your time and effort can bring smiles to many faces.
             </p>
+            <button id="cardbtn">Volunteer</button>
           </div>
           <div class="card">
-            <h2>Partner with Us</h2>
+            <h2>Partner with Us</h2><hr>
             <p>
               Become a partner and help us reach more people in need. Together,
               we can build a hunger-free world.
             </p>
+            <button id="cardbtn">Partner with us</button>
           </div>
         </div>
       </section>
@@ -364,7 +380,7 @@
         <div class="slideshow-container">
           <div class="slide fade">
             <img
-              src="../images/img1.jpg"
+              src="https://img.freepik.com/free-photo/front-view-donation-boxes-bags-with-food_23-2148613224.jpg?t=st=1721632514~exp=1721636114~hmac=150f73e979f6a26511eef6c7e10fb08050a8fe7d4f9e73e4cd99bf8640f1754b&w=900"
               alt="Slide 1"
               width="800"
               height="360"
@@ -372,7 +388,7 @@
           </div>
           <div class="slide fade">
             <img
-              src="../images/img2.jpg"
+              src="https://img.freepik.com/free-photo/volunteer-thanking-you-helping-with-donations-food-day_23-2148637997.jpg?t=st=1721632587~exp=1721636187~hmac=66d851c6b55df4a382f794597f61e26c33dceb5a4bb5e5fc5dd16153510f81e3&w=996"
               alt="Slide 2"
               width="800"
               height="360"
@@ -380,7 +396,7 @@
           </div>
           <div class="slide fade">
             <img
-              src="../images/img3.jpg"
+              src="https://img.freepik.com/free-photo/close-up-volunteers-collecting-food-donations_23-2149182031.jpg?t=st=1721632608~exp=1721636208~hmac=8440add46876c6fdda7fac24aa25b56bd7910d8b802b1b93c1d6b4f2b94863ac&w=996"
               alt="Slide 3"
               width="800"
               height="360"
