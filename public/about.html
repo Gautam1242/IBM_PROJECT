@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - About Us</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css">
     <style>
       /* Additional Styles for about.html */
       /* Basic Reset */
@@ -181,7 +181,7 @@
       }
 
       .card {
-        background: #fff;
+        background: #f0eeee;
         border: 1px solid #e0e0e0;
         border-radius: 8px;
         padding: 2rem;
@@ -195,7 +195,7 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
       .card:hover{
-        background-color: #dad8d8;
+        background-color: #bec0bd;
       }
 
       .card h2 {
@@ -208,6 +208,13 @@
         font-size: 1rem;
         color: #777;
       }
+      .newabout{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+      }
       @media (max-width: 768px) {
         .cards {
           flex-direction: column;
@@ -219,6 +226,10 @@
           width: 80%;
         }
       }
+      .btnsubmit:hover{
+        background-color: chartreuse;
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -227,7 +238,7 @@
       <div class="container">
         <nav>
           <!-- <img src="images/logo.png" class="logo" /> -->
-          <h1 style="color: #292a2b" id="first-nav">Food Flow</h1>
+          <h1 style="color: #292a2b" id="first-nav"><span style="color: #11a11b;font-weight: 800;"><span style="font-size: xx-large;">F</span>OOD</span> <span style="color: rgb(64, 153, 180);font-weight: 800;"><span style="font-size: xx-large;">F</span>LOW</span></h1>
           <ul id="sidemenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -244,7 +255,7 @@
     </div>
     <section id="about">
       <h1>About Us</h1>
-      <img class="fade-in card" src="https://img.freepik.com/free-vector/team-concept-illustration_114360-678.jpg?t=st=1721500317~exp=1721503917~hmac=187b7e3a94182bfeb2cdb80f307824efd1bd8c240f2e7e78d8fb4fa8af306bab&w=996"  alt="">
+      <img class="fade-in card" src="../images/about1.jpeg"  alt="">
       <p class="fade-in">
         FoodFlow is a non-profit organization focused on achieving the
         Sustainable Development Goal of Zero Hunger. We believe that food should
@@ -252,7 +263,7 @@
         create a seamless and efficient process for food donation, ensuring that
         surplus food reaches those who need it most.
       </p>
-      <img class="fade-in card" src="https://img.freepik.com/free-vector/goal-achievement-teamwork-business-concept-career-growth-cooperation-development-project_107791-29.jpg?t=st=1721500602~exp=1721504202~hmac=8c6e0ad7092ea8e3a0c2657ede65fd737f1559ddd097e78819423afe55a12ddb&w=740" alt="">
+      <img class="fade-in card" src="../images/about2.jpeg" alt="">
       <p class="fade-in">
         Our platform connects donors, such as restaurants, hotels, and
         individuals, with local charities and organizations that distribute the
@@ -267,27 +278,21 @@
         eradicate hunger and build a more sustainable future.
       </p>
 
-      <div class="team-card">
+      <div class="team-card newabout">
         <div class="team-member">
-          <img src="images/team-member1.jpg" alt="Team Member 1" />
-          <div class="member-info">
-            <h3>John Doe</h3>
-            <p>Founder & CEO</p>
-          </div>
+          <img src="../images/about3.jpeg" alt="Team Member 1" />
+          
         </div>
         <div class="team-member">
-          <img src="images/team-member2.jpg" alt="Team Member 2" />
-          <div class="member-info">
-            <h3>Jane Smith</h3>
-            <p>Operations Manager</p>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="images/team-member3.jpg" alt="Team Member 3" />
-          <div class="member-info">
-            <h3>David Johnson</h3>
-            <p>Community Outreach Coordinator</p>
-          </div>
+          <!-- <img src="images/team-member2.jpg" alt="Team Member 2" /> -->
+            <form action="">
+              <h3 style="color: #000;">SUBSCRIBE to our newsletter</h3>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email">
+              <input class="btnsubmit" type="button" value="SUBSCRIBE" style="background-color: #4cfa52;">
+            </form>
         </div>
       </div>
     </section>
@@ -306,7 +311,7 @@
       </div>
     </footer>
     <button id="scrollTopBtn" title="Go to top">Top</button>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script
       src="https://kit.fontawesome.com/eb93dfa716.js"
       crossorigin="anonymous"

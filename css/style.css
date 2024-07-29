@@ -33,7 +33,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: var(--bg);
+
+
+    background-color: #e4e9ec;
+
     color: #333;
 }
 
