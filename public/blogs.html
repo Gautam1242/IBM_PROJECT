@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - Our Blog</title>
-    <link rel="stylesheet" href="/css/blog.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       /* Basic Reset */
       * {
@@ -24,139 +23,55 @@
 
       /* Header Styles */
 
+      /* Section Styles */
+      /*  */
+
       /* Footer Styles */
+      footer {
+        background: #2d2e2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      footer .social-media {
+        margin-top: 1rem;
+      }
+
+      footer .social-media a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-media a:hover {
+        color: #66bb6a;
+      }
 
       /* Media Queries */
+      /* @media (max-width: 1024px) {
+        .blog-post {
+          flex: 1 1 calc(50% - 2rem);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .blog-post {
+          padding: 1.5rem;
+        }
+      } */
     </style>
-  </head>
 
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <!-- <img src="images/logo.png" class="logo" /> -->
-          <h1 style="color: #292a2b" id="first-nav">Food Flow</h1>
-          <ul id="sidemenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contact.html">Contact</a></li>
-
-            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-          </ul>
-          <a id="greenbtn" href="login.html"
-            ><button class="button--green" id="green-button">Login</button></a
-          >
-          <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
-        </nav>
-      </div>
-    </div>
-
-    <div class="container-below-header">
-      <img src="/images/blogheader.jpg" alt="" />
-      <div class="text-overlay">Our Blogs</div>
-    </div>
-
-    <div class="blogs">
-      <div class="blog_post">
-        <div class="blog-img">
-          <img src="/images/Food-distribution_20200825.jpg" alt="" />
-        </div>
-        <div class="blog-content">
-          <div>
-            <h2>Efficient Pantry Management: Minimizing Waste in Your Kitchen</h2>
-            <hr class="divider" />
-          </div>
-          <div class="blog-text">
-            <p>
-              This blog delves into the essential strategies for managing your
-              pantry efficiently, focusing on minimizing food waste. It covers
-              practical tips on inventory tracking, proper storage techniques,
-              and smart purchasing habits.
-            </p>
-          </div>
-          <button class="button-24" role="button">Read more</button>
-        </div>
-      </div>
-
-
-      <div class="blog_post">
-        <div class="blog-img">
-          <img src="/images/meal-planning.jpg" alt="" />
-        </div>
-        <div class="blog-content">
-          <div>
-            <h2>Meal Planning Mastery: Streamlining Your Weekly Grocery Hauls</h2>
-            <hr class="divider" />
-          </div>
-          <div class="blog-text">
-            <p>
-                Discover the art of meal planning in this blog, which aims to streamline your weekly grocery shopping. Learn how to create a meal plan that balances nutrition, variety, and budget. The blog offers templates for weekly menus,
-            </p>
-          </div>
-          <button class="button-24" role="button">Read more</button>
-        </div>
-      </div>
-
-
-
-
-      <div class="blog_post">
-        <div class="blog-img">
-          <img src="/images/miday-meal-scheme.jpg" alt="" />
-        </div>
-        <div class="blog-content">
-          <div>
-            <h2>Community Food Sharing: Enhancing Local Distribution Networks</h2>
-            <hr class="divider" />
-          </div>
-          <div class="blog-text">
-            <p>
-                this blog explores innovative ways to enhance local food distribution through community sharing initiatives. It highlights successful case studies of food co-ops, community fridges, and surplus food redistribution programs.
-            </p>
-          </div>
-          <button class="button-24" role="button">Read more</button>
-        </div>
-      </div>
-
-
-
-      <div class="blog_post">
-        <div class="blog-img">
-          <img src="/images/smart_kitchen_phone.jpg" alt="" />
-        </div>
-        <div class="blog-content">
-          <div>
-            <h2>Tech-Savvy Kitchen: Leveraging Apps for Smarter Food Management</h2>
-            <hr class="divider" />
-          </div>
-          <div class="blog-text">
-            <p>
-                Embrace technology in your kitchen with this blog focused on using apps for better food management. From inventory tracking to meal planning and grocery shopping, discover the top apps that can help you stay organized and efficient.
-            </p>
-          </div>
-          <button class="button-24" role="button">Read more</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- -------------------------------footer---------------------- -->
-    <footer>
-      <p>© 2024 FoodFlow. All rights reserved.</p>
-      <div class="social-media">
-        <a href="https://facebook.com/yourpage"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://twitter.com/yourpage"
-          ><i class="fa-brands fa-square-twitter"></i
-        ></a>
-        <a href="https://instagram.com/yourpage"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-    </footer>
     <script>
       // JavaScript for handling read more link click
       document.addEventListener("DOMContentLoaded", function () {
@@ -174,7 +89,150 @@
         });
       });
     </script>
-    <script src="/js/main.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- <img src="images/logo.png" class="logo" /> -->
+          <h1 style="color: #292a2b" id="first-nav">
+            <span style="color: #11a11b; font-weight: 800"
+              ><span style="font-size: xx-large">F</span>OOD</span
+            >
+            <span style="color: rgb(64, 153, 180); font-weight: 800"
+              ><span style="font-size: xx-large">F</span>LOW</span
+            >
+          </h1>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
+        </nav>
+      </div>
+    </div>
+    <div class="container-below-header">
+      <img src="/images/blogheader.jpg" alt="" />
+      <div class="text-overlay"></div>
+    </div>
+
+    <div class="blogs">
+      <div class="blog_post">
+        <div class="blog-img">
+          <img src="/images/Food-distribution_20200825.jpg" alt="" />
+        </div>
+        <div class="blog-content">
+          <div>
+            <h2>
+              Efficient Pantry Management: Minimizing Waste in Your Kitchen
+            </h2>
+            <hr class="divider" />
+          </div>
+          <div class="blog-text">
+            <p>
+              This blog delves into the essential strategies for managing your
+              pantry efficiently, focusing on minimizing food waste. It covers
+              practical tips on inventory tracking, proper storage techniques,
+              and smart purchasing habits.
+            </p>
+          </div>
+          <button class="button-24" role="button">Read more</button>
+        </div>
+      </div>
+
+      <div class="blog_post">
+        <div class="blog-img">
+          <img src="/images/meal-planning.jpg" alt="" />
+        </div>
+        <div class="blog-content">
+          <div>
+            <h2>
+              Meal Planning Mastery: Streamlining Your Weekly Grocery Hauls
+            </h2>
+            <hr class="divider" />
+          </div>
+          <div class="blog-text">
+            <p>
+              Discover the art of meal planning in this blog, which aims to
+              streamline your weekly grocery shopping. Learn how to create a
+              meal plan that balances nutrition, variety, and budget. The blog
+              offers templates for weekly menus,
+            </p>
+          </div>
+          <button class="button-24" role="button">Read more</button>
+        </div>
+      </div>
+
+      <div class="blog_post">
+        <div class="blog-img">
+          <img src="/images/miday-meal-scheme.jpg" alt="" />
+        </div>
+        <div class="blog-content">
+          <div>
+            <h2>
+              Community Food Sharing: Enhancing Local Distribution Networks
+            </h2>
+            <hr class="divider" />
+          </div>
+          <div class="blog-text">
+            <p>
+              this blog explores innovative ways to enhance local food
+              distribution through community sharing initiatives. It highlights
+              successful case studies of food co-ops, community fridges, and
+              surplus food redistribution programs.
+            </p>
+          </div>
+          <button class="button-24" role="button">Read more</button>
+        </div>
+      </div>
+
+      <div class="blog_post">
+        <div class="blog-img">
+          <img src="/images/smart_kitchen_phone.jpg" alt="" />
+        </div>
+        <div class="blog-content">
+          <div>
+            <h2>
+              Tech-Savvy Kitchen: Leveraging Apps for Smarter Food Management
+            </h2>
+            <hr class="divider" />
+          </div>
+          <div class="blog-text">
+            <p>
+              Embrace technology in your kitchen with this blog focused on using
+              apps for better food management. From inventory tracking to meal
+              planning and grocery shopping, discover the top apps that can help
+              you stay organized and efficient.
+            </p>
+          </div>
+          <button class="button-24" role="button">Read more</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2024 FoodFlow. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://facebook.com/yourpage"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/yourpage"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a href="https://instagram.com/yourpage"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <button id="scrollTopBtn" title="Go to top">Top</button>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
     <script
       src="https://kit.fontawesome.com/eb93dfa716.js"
       crossorigin="anonymous"
@@ -187,7 +245,6 @@
       }
       function closeMenu() {
         sidemenu.style.right = "-200px";
-        // sidemenu.style.height="100vh"
       }
     </script>
   </body>

@@ -1,113 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/service.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodFlow - Our Services</title>
+    <link rel="stylesheet" href="../css/service.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* Basic Reset */
+      body {
+        font-family: "Arial", sans-serif;
+        /* background-color: #ffffff; */
+        color: #333;
+        margin: 0;
+      }
+      /* Header Styles */
+
+      /* Section Styles */
+      section {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Services Styles */
+      .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 2rem;
+      }
+
+      .service-item {
+        flex: 1 1 45%;
+        background: #f4f4f9;
+        margin: 1rem;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background-color: #dad8d8;
+      }
+
+      .service-item h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .service-item p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* Footer Styles */
+      footer {
+        background: #2d2e2e;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      footer .social-media {
+        margin-top: 1rem;
+      }
+
+      footer .social-media a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-media a:hover {
+        color: #66bb6a;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .service-item {
+          flex: 1 1 100%;
+          margin: 0.5rem 0;
+        }
+        footer .social-media a {
+          margin: 0 0.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <div id="header">
-        <div class="container">
-          <nav>
-            <!-- <img src="images/logo.png" class="logo" /> -->
-            <img id="first-nav" src="/images/Logo.png" height="40rem">
-            <ul id="sidemenu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <li><a href="contact.html">Contact</a></li>
-  
-              <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-            </ul>
-            <a id="greenbtn" href="login.html"
-              ><button class="button--green" id="green-button">Login</button></a
+      <div class="container">
+        <nav>
+          <!-- <img src="images/logo.png" class="logo" /> -->
+          <h1 style="color: #292a2b" id="first-nav">
+            <span style="color: #11a11b; font-weight: 800"
+              ><span style="font-size: xx-large">F</span>OOD</span
             >
-            <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
-          </nav>
+            <span style="color: rgb(64, 153, 180); font-weight: 800"
+              ><span style="font-size: xx-large">F</span>LOW</span
+            >
+          </h1>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" id="first-nav" onclick="openMenu()"></i>
+        </nav>
+      </div>
+    </div>
+    <div class="container-below-header">
+      <img src="/images/Food-distribution_20200825.jpg" alt="" />
+      <div class="text-overlay"></div>
+    </div>
+
+    <div class="service-container">
+      <a href="#">
+        <div class="service-item">
+          <div class="icon-logo">
+            <img src="/images/icons/food-truck.svg" alt="" />
+          </div>
+          <div class="service-heading">
+            <h2>Food Donation Collection</h2>
+          </div>
+          <div class="service-desc">
+            <p>
+              We facilitate the collection of surplus food from restaurants,
+              hotels, and individuals. Our team ensures that the food is safely
+              transported to local charities and organizations that distribute
+              it to those in need.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="container-below-header">
-        <img src="/images/Food-distribution_20200825.jpg" alt="" />
-        <div class="text-overlay">Our Services</div>
-      </div>
-
-      <div class="service-container">
-        <a href="#">
-            <div class="service-item">
-                <div class="icon-logo">
-                    <img src="/images/icons/food-truck.svg" alt="">
-                </div>
-                <div class="service-heading">
-                    <h2>Food Donation Collection</h2>
-                </div>
-                <div class="service-desc">
-                    <p>We facilitate the collection of surplus food from restaurants, hotels, and individuals. Our team ensures that the food is safely transported to local charities and organizations that distribute it to those in need.</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="service-item">
-                <div class="icon-logo">
-                    <img src="/images/icons/meal.svg" alt="">
-                </div>
-                <div class="service-heading">
-                    <h2>Meal Distribution</h2>
-                </div>
-                <div class="service-desc">
-                    <p>Our volunteers and partners work tirelessly to distribute meals to food-insecure individuals and families. We coordinate with local shelters, food banks, and community centers to ensure that donated food reaches those who need it most.</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="service-item">
-                <div class="icon-logo">
-                    <img src="/images/icons/community.svg" alt="">
-                </div>
-                    <div class="service-heading">
-                        <h2>Community Outreach Programs</h2>
-                    </div>
-                    <div class="service-desc">
-                        <p>FoodFlow organizes various community outreach programs to raise awareness about food insecurity and food waste.educational workshops, food drives, and events to engage the community and promote sustainable practices.</p>
-                    </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="service-item">
-                <div class="icon-logo">
-                    <img src="/images/icons/volunteer.svg" alt="">
-                </div>
-                    <div class="service-heading">
-                        <h2>Volunteer Opportunities</h2>
-                    </div>
-                    <div class="service-desc">
-                        <p>We offer a range of volunteer opportunities for individuals who want to make a difference. From meal distribution to organizing events, our volunteers play a crucial role in our mission to eradicate hunger. </p>
-                    </div>
-            </div>
-        </a>
-
-      </div>
-      <footer>
-        <p>© 2024 FoodFlow. All rights reserved.</p>
-        <div class="social-media">
-          <a href="https://facebook.com/yourpage"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://twitter.com/yourpage"
-            ><i class="fa-brands fa-square-twitter"></i
-          ></a>
-          <a href="https://instagram.com/yourpage"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
+      </a>
+      <a href="#">
+        <div class="service-item">
+          <div class="icon-logo">
+            <img src="/images/icons/meal.svg" alt="" />
+          </div>
+          <div class="service-heading">
+            <h2>Meal Distribution</h2>
+          </div>
+          <div class="service-desc">
+            <p>
+              Our volunteers and partners work tirelessly to distribute meals to
+              food-insecure individuals and families. We coordinate with local
+              shelters, food banks, and community centers to ensure that donated
+              food reaches those who need it most.
+            </p>
+          </div>
         </div>
-      </footer>
+      </a>
+      <a href="#">
+        <div class="service-item">
+          <div class="icon-logo">
+            <img src="/images/icons/community.svg" alt="" />
+          </div>
+          <div class="service-heading">
+            <h2>Community Outreach Programs</h2>
+          </div>
+          <div class="service-desc">
+            <p>
+              FoodFlow organizes various community outreach programs to raise
+              awareness about food insecurity and food waste.educational
+              workshops, food drives, and events to engage the community and
+              promote sustainable practices.
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="service-item">
+          <div class="icon-logo">
+            <img src="/images/icons/volunteer.svg" alt="" />
+          </div>
+          <div class="service-heading">
+            <h2>Volunteer Opportunities</h2>
+          </div>
+          <div class="service-desc">
+            <p>
+              We offer a range of volunteer opportunities for individuals who
+              want to make a difference. From meal distribution to organizing
+              events, our volunteers play a crucial role in our mission to
+              eradicate hunger.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <footer>
+      <p>© 2024 FoodFlow. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://facebook.com/yourpage"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/yourpage"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a href="https://instagram.com/yourpage"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <button id="scrollTopBtn" title="Go to top">Top</button>
+    <script src="../js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/eb93dfa716.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
 
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+      // Example JavaScript for adding animation
+      const serviceItems = document.querySelectorAll(".service-item");
 
-      
+      serviceItems.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+          item.style.transform = "translateY(-5px)";
+          item.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.15)";
+        });
 
-    
-</body>
+        item.addEventListener("mouseout", () => {
+          item.style.transform = "translateY(0)";
+          item.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+        });
+      });
+    </script>
+  </body>
 </html>

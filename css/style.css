@@ -333,7 +333,7 @@ section {
     transform: scale(1.05);
 }
 
-footer {
+/* footer {
     margin-top: 20px;
     background: #333;
     color: #fff;
@@ -342,9 +342,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
+} */
 
-footer .social-media a {
+/* footer .social-media a {
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
@@ -352,7 +352,7 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #ffd700;
-}
+} */
 
 form {
     background: #fff;
