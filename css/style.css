@@ -1,32 +1,56 @@
-*{
+:root {
+    --main: #00E593;
+    --stroke:rgb(189, 189, 189);
+    --bg: #F8F8FF;
+    
+}
+
+
+
+
+
+
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
     /* background-color: #b1d1f4; */
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+
+
     background-color: #e4e9ec;
+
     color: #333;
 }
+
+
+/* ---------------------------header------------------- */
 #header {
+    margin-bottom: 40px;
     width: 100%;
     height: 60px;
     background-size: cover;
     background-position: center;
-  }
+}
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +63,7 @@ nav .fa-solid {
 }
 
 .logo {
-    width: 140px; 
+    width: 140px;
 }
 
 nav ul li {
@@ -59,9 +83,10 @@ nav ul li a::after {
     content: "";
     width: 0;
     height: 3px;
-    background: #858585;
+    background: var(--main);
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -6px;
     transition: 0.5s;
 }
@@ -74,75 +99,212 @@ nav ul li a:hover::after {
     margin-top: 10%;
     font-size: 30px;
 }
-  
+
 .header-text h1 {
     color: #fff;
     font-size: 60px;
     margin-top: 20px;
 }
-  
+
 .header-text h1 span {
     color: #5468e8;
 }
 
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
     #first-nav {
-      padding-top: 35px;
-      font-size: 30px;
+        padding-top: 35px;
+        font-size: 30px;
     }
-    
-    nav{
+
+    nav {
         margin: 10px 25px;
     }
-    
+
     nav .fa-solid {
-      display: block;
-      font-size: 25px;
+        display: block;
+        font-size: 25px;
     }
+
     nav ul {
-      background: #242424;
-      position: fixed;
-      top: 0;
-      right: -200px;
-      width: 200px;
-      padding-top: 50px;
-      z-index: 2;
-      transition: right 0.5s;
-      opacity: 1;
-      height: fit-content;
+        background: #242424;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        opacity: 1;
+        height: fit-content;
     }
+
     nav ul li {
-      display: block;
-      margin: 25px;
+        display: block;
+        margin: 25px;
     }
-    nav ul li a{
-      color: #fff;
+
+    nav ul li a {
+        color: #fff;
     }
+
     nav ul .fa-solid {
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      cursor: pointer;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
+
     .cards {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 
     .card {
-      width: 80%;
+        width: 80%;
     }
 
     .form-control input,
     .form-control textarea {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
+
+
+/* ----------------------login button----------------- */
+#greenbtn {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+
+#green-button {
+
+    appearance: none;
+    color: black;
+    height: 40px;
+    border: 1px solid black;
+    appearance: none;
+    background-color: var(--main);
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color linear .1s;
+    margin-bottom: 20px;
+
+    &:after {
+        content: "";
+        background-color: black;
+        left: 0;
+        top: 0;
+        transform: translate(2px, 2px);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+
+    &:hover {
+        background-color: var(--main);
+        left: 1px;
+        top: 1px;
+
+        &:after {
+            transform: translate(1px, 1px);
+        }
+    }
+
+    &:active {
+        background-color: var(--main);
+        left: 2px;
+        top: 2px;
+
+        &:after {
+            transform: translate(0px, 0px);
+        }
+    }
+}
+
+.button--green {
+    background-color: var(--main);
+
+    &:hover {
+        background-color: var(--main);
+    }
+
+    &:active {
+        background-color: var(--main);
+    }
+}
+
+/* ----------------------login button----------------- */
 
 
 
 
+
+/* ---------------------------header end------------------- */
+
+
+.container-below-header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-below-header img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-below-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.container-below-header img {
+    position: relative;
+    z-index: 0;
+}
+
+.container-below-header .text-overlay {
+    position: absolute;
+    text-wrap: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 42px;
+    font-weight: 500;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
 
 section {
     padding: 2rem;
@@ -172,6 +334,7 @@ section {
 }
 
 footer {
+    margin-top: 20px;
     background: #333;
     color: #fff;
     text-align: center;
@@ -206,7 +369,8 @@ form label {
     margin-bottom: 0.5rem;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -228,33 +392,7 @@ form button:hover {
     background: #ffd700;
 }
 
-.blog-post {
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.blog-post h2 {
-    margin-top: 0;
-}
-
-.blog-post p {
-    margin-bottom: 1rem;
-}
-
-.blog-post a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.blog-post a:hover {
-    color: #ffd700;
-}
 
 /* Scroll-to-Top Button Styles */
 #scrollTopBtn {
@@ -272,10 +410,9 @@ form button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: background-color 0.3s, transform 0.3s;
-  }
+}
 
-  #scrollTopBtn:hover {
-    background-color: #4caf50;
+#scrollTopBtn:hover {
+    background-color: var(--main);
     transform: scale(1.1);
-  }
-
+}
