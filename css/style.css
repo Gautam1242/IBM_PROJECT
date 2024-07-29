@@ -1,6 +1,8 @@
 :root {
     --main: #00E593;
-    --bg: #F8F8FF
+    --stroke:rgb(189, 189, 189);
+    --bg: #F8F8FF;
+    
 }
 
 
@@ -253,7 +255,53 @@ nav ul li a:hover::after {
 /* ---------------------------header end------------------- */
 
 
+.container-below-header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+.container-below-header img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-below-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.container-below-header img {
+    position: relative;
+    z-index: 0;
+}
+
+.container-below-header .text-overlay {
+    position: absolute;
+    text-wrap: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 42px;
+    font-weight: 500;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
 
 section {
     padding: 2rem;
