@@ -201,6 +201,7 @@ nav ul li a:hover::after {
     position: relative;
     transition: background-color linear .1s;
     margin-bottom: 20px;
+    cursor: pointer;
 
     &:after {
         content: "";

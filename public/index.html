@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - Home</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       /* CSS styles */
       /* Basic Reset */
@@ -21,8 +21,6 @@
       }
 
       /* Container Styles */
-
-      
 
       /* Header Styles
 
@@ -67,7 +65,7 @@
         transform: translateY(-10px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
-      .card:hover{
+      .card:hover {
         background-color: #e7eeea;
       }
 
@@ -266,7 +264,6 @@
         transform: scale(1.1);
       }
 
-
       /* Media Queries */
       @media (max-width: 768px) {
         .cards {
@@ -283,7 +280,6 @@
         .form-control textarea {
           width: 100%;
         }
-        
       }
       /* Animation Styles */
       .fade-in {
@@ -318,7 +314,14 @@
         <div class="container">
           <nav>
             <!-- <img src="images/logo.png" class="logo" /> -->
-            <h1 style="color: #1e1f1e" id="first-nav"><span style="color: #11a11b;font-weight: 800;"><span style="font-size: xx-large;">F</span>OOD</span> <span style="color: rgb(64, 153, 180);font-weight: 800;"><span style="font-size: xx-large;">F</span>LOW</span></h1>
+            <h1 style="color: #1e1f1e" id="first-nav">
+              <span style="color: #11a11b; font-weight: 800"
+                ><span style="font-size: xx-large">F</span>OOD</span
+              >
+              <span style="color: rgb(64, 153, 180); font-weight: 800"
+                ><span style="font-size: xx-large">F</span>LOW</span
+              >
+            </h1>
             <ul id="sidemenu">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
@@ -326,6 +329,12 @@
               <li><a href="news.html">News</a></li>
               <li><a href="blogs.html">Blogs</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li>
+                <a id="greenbtn" href="login.html"
+                  ><button class="button--green" id="green-button">
+                    Login
+                  </button></a>
+              </li>
 
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
@@ -335,12 +344,20 @@
       </div>
       <section id="home">
         <marquee loop direction="left"><h1>Welcome to Food Flow</h1></marquee>
-          
+
         <div>
-          <img class="card" src="https://img.freepik.com/free-vector/tiny-people-standing-near-box-donation-food-delivery-volunteers-giving-healthy-grocery-goods-charity-flat-vector-illustration-social-support-humanitarian-help-community-sharing-concept_74855-21023.jpg" alt="">
-          <img class="card" src="https://img.freepik.com/premium-photo/group-people-are-standing-around-boxes-food-including-vegetables_137441-11131.jpg?w=996" alt="">
+          <img
+            class="card"
+            src="https://img.freepik.com/free-vector/tiny-people-standing-near-box-donation-food-delivery-volunteers-giving-healthy-grocery-goods-charity-flat-vector-illustration-social-support-humanitarian-help-community-sharing-concept_74855-21023.jpg"
+            alt=""
+          />
+          <img
+            class="card"
+            src="https://img.freepik.com/premium-photo/group-people-are-standing-around-boxes-food-including-vegetables_137441-11131.jpg?w=996"
+            alt=""
+          />
         </div>
-        
+
         <p>
           FoodFlow is a community-driven initiative dedicated to eradicating
           hunger by facilitating the donation of meals. Our platform connects
@@ -350,7 +367,8 @@
         </p>
         <div class="cards">
           <div class="card">
-            <h2>Donate Food</h2><hr>
+            <h2>Donate Food</h2>
+            <hr />
             <p>
               Contribute your excess food to those in need and help fight hunger
               in your community. Every meal counts!
@@ -358,7 +376,8 @@
             <button id="cardbtn">Donate Food</button>
           </div>
           <div class="card">
-            <h2>Volunteer</h2><hr>
+            <h2>Volunteer</h2>
+            <hr />
             <p>
               Join us as a volunteer to help distribute meals and make a
               difference. Your time and effort can bring smiles to many faces.
@@ -366,7 +385,8 @@
             <button id="cardbtn">Volunteer</button>
           </div>
           <div class="card">
-            <h2>Partner with Us</h2><hr>
+            <h2>Partner with Us</h2>
+            <hr />
             <p>
               Become a partner and help us reach more people in need. Together,
               we can build a hunger-free world.
