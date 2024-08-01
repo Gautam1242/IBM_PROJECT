@@ -313,15 +313,10 @@
       <div id="header">
         <div class="container">
           <nav>
-            <!-- <img src="images/logo.png" class="logo" /> -->
-            <h1 style="color: #1e1f1e" id="first-nav">
-              <span style="color: #11a11b; font-weight: 800"
-                ><span style="font-size: xx-large">F</span>OOD</span
-              >
-              <span style="color: rgb(64, 153, 180); font-weight: 800"
-                ><span style="font-size: xx-large">F</span>LOW</span
-              >
-            </h1>
+            <div class="banner">
+              <div class="banner-logo"><img src="../images/Logo.png" width="180px" height="75px" style="padding-top: 18px;"  alt="">
+              </div>
+            </div>
             <ul id="sidemenu">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
@@ -459,12 +454,9 @@
           ></a>
         </div>
       </footer>
-      <button id="scrollTopBtn" title="Go to top">Top</button>
+      <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
-    <script
-      src="https://kit.fontawesome.com/eb93dfa716.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/js/main.js"></script>
 
     <script>
       var sidemenu = document.getElementById("sidemenu");
@@ -552,23 +544,27 @@
       }
 
       // JavaScript for scroll-to-top button
-      const scrollTopBtn = document.querySelector("#scrollTopBtn");
+      // const scrollTopBtn = document.querySelector("#scrollTopBtn");
 
-      window.addEventListener("scroll", function () {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          scrollTopBtn.style.display = "block";
-        } else {
-          scrollTopBtn.style.display = "none";
-        }
-      });
+      // window.addEventListener("scroll", function () {
+      //   if (
+      //     document.body.scrollTop > 20 ||
+      //     document.documentElement.scrollTop > 20
+      //   ) {
+      //     scrollTopBtn.style.display = "block";
+      //   } else {
+      //     scrollTopBtn.style.display = "none";
+      //   }
+      // });
 
-      scrollTopBtn.addEventListener("click", function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-      });
+      // scrollTopBtn.addEventListener("click", function () {
+      //   document.body.scrollTop = 0; // For Safari
+      //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+      // });
     </script>
+     <script
+     src="https://kit.fontawesome.com/eb93dfa716.js"
+     crossorigin="anonymous"
+   ></script>
   </body>
 </html>

@@ -1,0 +1,274 @@
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('left-top.png'), url('right-bottom.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+}*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('left-top.png'), url('right-bottom.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 30%; /* Adjust size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: 40%; /* Adjust size for mobile screens */
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    /* background-image: url('../images/Logo.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.banner.banner-logo{
+    background-image: url("../images/img1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    color: #007BFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.create-account {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #c8ffeb;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #00e593;
+}
+
+.create-account:hover {
+    background-color: #24c997;
+}
+
+p {
+    margin: 20px 0 0;
+    color: #555;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('left-top.png'), url('right-bottom.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+}*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-image: url('../images/left-top.png'), url('../images/right-bottom.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40%; /* Adjust as necessary for appropriate scaling */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 30%; /* Adjust size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: 40%; /* Adjust size for mobile screens */
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px; /* Semi-circle edges */
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    color: #007BFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.create-account {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px; /* Semi-circle edges */
+    background-color: #2cffb4; /* Main background color */
+    color: #000; /* Appropriate text color */
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
+}
+
+.create-account:hover {
+    background-color: #24c997; /* Appropriate hover color */
+}
+
+p {
+    margin: 20px 0 0;
+    color: #555;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
