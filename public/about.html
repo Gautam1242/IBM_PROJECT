@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FoodFlow - About Us</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       /* Additional Styles for about.html */
       /* Basic Reset */
@@ -126,8 +126,8 @@
         color: #66bb6a;
       }
 
-       /* Scroll-to-Top Button Styles */
-       #scrollTopBtn {
+      /* Scroll-to-Top Button Styles */
+      #scrollTopBtn {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -194,7 +194,7 @@
         transform: translateY(-10px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       }
-      .card:hover{
+      .card:hover {
         background-color: #bec0bd;
       }
 
@@ -208,7 +208,7 @@
         font-size: 1rem;
         color: #777;
       }
-      .newabout{
+      .newabout {
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -226,7 +226,7 @@
           width: 80%;
         }
       }
-      .btnsubmit:hover{
+      .btnsubmit:hover {
         background-color: chartreuse;
         cursor: pointer;
       }
@@ -238,7 +238,14 @@
       <div class="container">
         <nav>
           <div class="banner">
-            <div class="banner-logo"><img src="../images/Logo.png" width="180px" height="75px" style="padding-top: 18px;"  alt="">
+            <div class="banner-logo">
+              <img
+                src="../images/Logo.png"
+                width="180px"
+                height="75px"
+                style="padding-top: 18px"
+                alt=""
+              />
             </div>
           </div>
           <ul id="sidemenu">
@@ -252,7 +259,8 @@
               <a id="greenbtn" href="login.html"
                 ><button class="button--green" id="green-button">
                   Login
-                </button></a>
+                </button></a
+              >
             </li>
 
             <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
@@ -263,7 +271,7 @@
     </div>
     <section id="about">
       <h1>About Us</h1>
-      <img class="fade-in card" src="../images/about1.jpeg"  alt="">
+      <img class="fade-in card" src="../images/about1.jpeg" alt="" />
       <p class="fade-in">
         FoodFlow is a non-profit organization focused on achieving the
         Sustainable Development Goal of Zero Hunger. We believe that food should
@@ -271,14 +279,18 @@
         create a seamless and efficient process for food donation, ensuring that
         surplus food reaches those who need it most.
       </p>
-      <img class="fade-in card" src="../images/about2.jpeg" alt="">
+      <img class="fade-in card" src="../images/about2.jpeg" alt="" />
       <p class="fade-in">
         Our platform connects donors, such as restaurants, hotels, and
         individuals, with local charities and organizations that distribute the
         food. By leveraging technology and community partnerships, we aim to
         reduce food waste and provide nutritious meals to the hungry.
       </p>
-      <img class="fade-in card" src="https://img.freepik.com/premium-vector/group-businesspeople-with-hands-coming-together-unity-teamwork-success-celebration_235461-685.jpg?w=826" alt="">
+      <img
+        class="fade-in card"
+        src="https://img.freepik.com/premium-vector/group-businesspeople-with-hands-coming-together-unity-teamwork-success-celebration_235461-685.jpg?w=826"
+        alt=""
+      />
       <p class="fade-in">
         Founded in 2024, FoodFlow has quickly grown to become a trusted resource
         for both donors and recipients. Our dedicated team works tirelessly to
@@ -289,18 +301,22 @@
       <div class="team-card newabout">
         <div class="team-member">
           <img src="../images/about3.jpeg" alt="Team Member 1" />
-          
         </div>
         <div class="team-member">
           <!-- <img src="images/team-member2.jpg" alt="Team Member 2" /> -->
-            <form action="">
-              <h3 style="color: #000;">SUBSCRIBE to our newsletter</h3>
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Enter your name">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter your email">
-              <input class="btnsubmit" type="button" value="SUBSCRIBE" style="background-color: #4cfa52;">
-            </form>
+          <form action="">
+            <h3 style="color: #000">SUBSCRIBE to our newsletter</h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <input
+              class="btnsubmit"
+              type="button"
+              value="SUBSCRIBE"
+              style="background-color: #4cfa52"
+            />
+          </form>
         </div>
       </div>
     </section>
@@ -318,7 +334,9 @@
         ></a>
       </div>
     </footer>
-    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="scrollTopBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script src="../js/main.js"></script>
     <script
       src="https://kit.fontawesome.com/eb93dfa716.js"
